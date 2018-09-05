@@ -429,12 +429,15 @@
             this.clickFn = (slide) => {
                 if ( slide.isPositionedRight() ) {
                     this.navigate('next');
+                    console.log("Slide: " + JSON.stringify(slide));
                 }
                 else if ( slide.isPositionedLeft() ) {
                     this.navigate('prev');
+                    console.log("Slide: " + JSON.stringify(slide));
                 }
                 else {
                     this.showContent();
+                    console.log("Slide: " + JSON.stringify(slide));
                 }
             };
             for (let slide of this.slides) {
